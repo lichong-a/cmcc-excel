@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "cmcc.work-dir",
+      "type": "java.lang.String",
+      "description": "工作目录."
+  }
+] }

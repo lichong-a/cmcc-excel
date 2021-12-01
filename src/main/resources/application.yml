@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  forward-headers-strategy: native
+  compression:
+    enabled: true
+spring:
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:h2:mem:cmcc;MODE=MYSQL;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: cmcc123123
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    open-in-view: false
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+  servlet:
+    multipart:
+      max-file-size: 10240MB
+      max-request-size: 10240MB
+  cache:
+    type: none
+logging:
+  level:
+    work.lichong.cmcc.excel: DEBUG
+    org.hibernate: INFO
+    org.hibernate.type.descriptor.sql.BasicBinder: INFO
+    org.hibernate.type.descriptor.sql.BasicExtractor: INFO
+  file:
+    path: ${cmcc.work-dir}/logs
+
+cmcc:
+  work-dir: ${user.home}/cmcc-excel/
