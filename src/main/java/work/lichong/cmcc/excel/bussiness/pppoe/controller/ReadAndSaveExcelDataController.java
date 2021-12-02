@@ -1,10 +1,18 @@
 package work.lichong.cmcc.excel.bussiness.pppoe.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 import work.lichong.cmcc.excel.bussiness.pppoe.service.ReadAndSaveExcelDataService;
+import work.lichong.cmcc.excel.common.bean.Result;
+import work.lichong.cmcc.excel.common.exception.ExportException;
+import work.lichong.cmcc.excel.common.result.ResponseStatus;
+import work.lichong.cmcc.excel.common.utils.ResponseUtil;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author ric
@@ -12,15 +20,39 @@ import work.lichong.cmcc.excel.bussiness.pppoe.service.ReadAndSaveExcelDataServi
  * @website https://lichong.work
  */
 @RestController
-@RequestMapping("/read")
+@RequestMapping("/api/read")
 public class ReadAndSaveExcelDataController {
 
     @Autowired
     ReadAndSaveExcelDataService service;
 
-    @GetMapping("/pppoe/1")
-    public String readPppoeExcel(){
-        service.readPppoe();
-        return "success";
+    @PostMapping("/pppoe/1")
+    public String readPppoeExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
+        service.readPppoe(file);
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+    }
+
+    @PostMapping("/pppoe/2")
+    public String readOltResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
+        service.readOltResult(file);
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+    }
+
+    @PostMapping("/pppoe/3")
+    public String readOnuResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
+        service.readOnuResult(file);
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+    }
+
+    @PostMapping("/pppoe/4")
+    public String readFgqResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
+        service.readFgqResult(file);
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+    }
+
+    @PostMapping("/pppoe/5")
+    public String readFgqPortResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
+        service.readFgqPortResult(file);
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
     }
 }

@@ -3,6 +3,8 @@ server:
   forward-headers-strategy: native
   compression:
     enabled: true
+  servlet:
+    context-path: /
 spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss

@@ -55,6 +55,6 @@ public class OltResultExcelDataListener implements ReadListener<OltResultEntity>
      */
     @Override
     public void doAfterAllAnalysed(AnalysisContext analysisContext) {
-        log.info("PppoeExcel所有数据解析完成！");
+        log.info("OltResultExcel所有数据解析完成！");
     }
 }

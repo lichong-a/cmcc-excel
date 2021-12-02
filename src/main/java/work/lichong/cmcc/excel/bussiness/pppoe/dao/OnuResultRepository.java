@@ -10,5 +10,5 @@ import work.lichong.cmcc.excel.bussiness.pppoe.entity.OnuResultEntity;
  * @website https://lichong.work
  */
 @Repository
-public interface OnuResultRespository extends JpaRepository<OnuResultEntity, Long> {
+public interface OnuResultRepository extends JpaRepository<OnuResultEntity, Long> {
 }

@@ -4,20 +4,18 @@ import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.read.listener.ReadListener;
 import com.alibaba.excel.util.ListUtils;
 import lombok.extern.slf4j.Slf4j;
-import work.lichong.cmcc.excel.bussiness.pppoe.dao.OnuResultRepository;
-import work.lichong.cmcc.excel.bussiness.pppoe.entity.OnuResultEntity;
+import work.lichong.cmcc.excel.bussiness.pppoe.dao.FgqPortResultRepository;
+import work.lichong.cmcc.excel.bussiness.pppoe.entity.FgqPortResultEntity;
 
 import java.util.List;
 
 /**
- * 
- *
  * @author ric
- * @date 2021年12月01日 23:55
+ * @date 2021年12月02日 21:11
  * @website https://lichong.work
  */
 @Slf4j
-public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity> {
+public class FgpPortResultExcelDataListener implements ReadListener<FgqPortResultEntity> {
     /**
      * 每隔5条存储数据库，实际使用中可以100条，然后清理list ，方便内存回收
      */
@@ -25,11 +23,11 @@ public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity>
     /**
      * 缓存的数据
      */
-    private List<OnuResultEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
+    private List<FgqPortResultEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
 
-    private OnuResultRepository repository;
+    private FgqPortResultRepository repository;
 
-    public OnuResultExcelDataListener(OnuResultRepository repository) {
+    public FgpPortResultExcelDataListener(FgqPortResultRepository repository) {
         this.repository = repository;
     }
 
@@ -40,7 +38,7 @@ public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity>
      * @param analysisContext
      */
     @Override
-    public void invoke(OnuResultEntity data, AnalysisContext analysisContext) {
+    public void invoke(FgqPortResultEntity data, AnalysisContext analysisContext) {
         cachedDataList.add(data);
         // 达到BATCH_COUNT了，需要去存储一次数据库，防止数据几万条数据在内存，容易OOM
         if (cachedDataList.size() >= BATCH_COUNT) {
@@ -57,6 +55,6 @@ public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity>
      */
     @Override
     public void doAfterAllAnalysed(AnalysisContext analysisContext) {
-        log.info("OnuResultExcel所有数据解析完成！");
+        log.info("FgpPortResultExcel所有数据解析完成！");
     }
 }
