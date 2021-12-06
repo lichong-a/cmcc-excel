@@ -29,11 +29,9 @@ public class ReadAndSaveExcelDataService {
     @Autowired
     FgqPortResultRepository fgqPortResultRepository;
 
-
     public void readPppoe(MultipartFile file) throws ExportException {
         try {
             pppoeRepository.deleteAll();
-            // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
             EasyExcelFactory.read(file.getInputStream(), PppoeEntity.class, new PppoeExcelDataListener(pppoeRepository)).sheet().doRead();
         } catch (Exception e) {
             throw new ExportException(ResponseStatus.RESPONSE_5XX_INTERNAL_SERVER_ERROR, e);
@@ -43,7 +41,6 @@ public class ReadAndSaveExcelDataService {
     public void readOltResult(MultipartFile file) throws ExportException {
         try {
             oltResultRepository.deleteAll();
-            // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
             EasyExcelFactory.read(file.getInputStream(), OltResultEntity.class, new OltResultExcelDataListener(oltResultRepository)).sheet().doRead();
         } catch (Exception e) {
             throw new ExportException(ResponseStatus.RESPONSE_5XX_INTERNAL_SERVER_ERROR, e);
@@ -53,7 +50,6 @@ public class ReadAndSaveExcelDataService {
     public void readOnuResult(MultipartFile file) throws ExportException {
         try {
             onuResultRepository.deleteAll();
-            // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
             EasyExcelFactory.read(file.getInputStream(), OnuResultEntity.class, new OnuResultExcelDataListener(onuResultRepository)).sheet().doRead();
         } catch (Exception e) {
             throw new ExportException(ResponseStatus.RESPONSE_5XX_INTERNAL_SERVER_ERROR, e);
@@ -63,7 +59,6 @@ public class ReadAndSaveExcelDataService {
     public void readFgqResult(MultipartFile file) throws ExportException {
         try {
             fgqResultRepository.deleteAll();
-            // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
             EasyExcelFactory.read(file.getInputStream(), FgqResultEntity.class, new FgpResultExcelDataListener(fgqResultRepository)).sheet().doRead();
         } catch (Exception e) {
             throw new ExportException(ResponseStatus.RESPONSE_5XX_INTERNAL_SERVER_ERROR, e);
@@ -73,7 +68,6 @@ public class ReadAndSaveExcelDataService {
     public void readFgqPortResult(MultipartFile file) throws ExportException {
         try {
             fgqPortResultRepository.deleteAll();
-            // 这里 需要指定读用哪个class去读，然后读取第一个sheet 文件流会自动关闭
             EasyExcelFactory.read(file.getInputStream(), FgqPortResultEntity.class, new FgpPortResultExcelDataListener(fgqPortResultRepository)).sheet().doRead();
         } catch (Exception e) {
             throw new ExportException(ResponseStatus.RESPONSE_5XX_INTERNAL_SERVER_ERROR, e);

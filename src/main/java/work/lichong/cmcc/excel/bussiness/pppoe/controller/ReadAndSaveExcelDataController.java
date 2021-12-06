@@ -29,30 +29,30 @@ public class ReadAndSaveExcelDataController {
     @PostMapping("/pppoe/1")
     public String readPppoeExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
         service.readPppoe(file);
-        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK, "1"));
     }
 
     @PostMapping("/pppoe/2")
     public String readOltResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
         service.readOltResult(file);
-        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK, "2"));
     }
 
     @PostMapping("/pppoe/3")
     public String readOnuResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
         service.readOnuResult(file);
-        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK, "3"));
     }
 
     @PostMapping("/pppoe/4")
     public String readFgqResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
         service.readFgqResult(file);
-        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK, "4"));
     }
 
     @PostMapping("/pppoe/5")
     public String readFgqPortResultExcel(HttpServletResponse response, @RequestParam("file") MultipartFile file) throws ExportException {
         service.readFgqPortResult(file);
-        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
+        return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK, "5"));
     }
 }
