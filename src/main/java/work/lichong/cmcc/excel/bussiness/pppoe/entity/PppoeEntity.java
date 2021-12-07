@@ -31,10 +31,10 @@ public class PppoeEntity {
     @ExcelIgnore
     private Long id;
     /**
-     * 地区
+     * 地市
      */
-    @ExcelProperty(value = "地区", index = 0)
-    private String dq;
+    @ExcelProperty(value = "地市", index = 0)
+    private String ds;
     /**
      * 区县
      */
@@ -96,5 +96,45 @@ public class PppoeEntity {
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    public void setDs(String ds) {
+        this.ds = ds.trim();
+    }
+
+    public void setQx(String qx) {
+        this.qx = qx.trim();
+    }
+
+    public void setXqId(String xqId) {
+        this.xqId = xqId.trim();
+    }
+
+    public void setXqmc(String xqmc) {
+        this.xqmc = xqmc.trim();
+    }
+
+    public void setKhbkdzh(String khbkdzh) {
+        this.khbkdzh = khbkdzh.trim();
+    }
+
+    public void setHdkdzh(String hdkdzh) {
+        this.hdkdzh = hdkdzh.trim();
+    }
+
+    public void setHdIp(String hdIp) {
+        this.hdIp = hdIp.trim();
+    }
+
+    public void setHdPon(String hdPon) {
+        this.hdPon = hdPon.trim();
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip.trim();
+    }
+
+    public void setPon(String pon) {
+        this.pon = pon.trim();
     }
 }

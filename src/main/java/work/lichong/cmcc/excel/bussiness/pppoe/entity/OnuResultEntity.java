@@ -24,6 +24,7 @@ import java.util.Objects;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class OnuResultEntity {
 
     @Id
@@ -241,5 +242,161 @@ public class OnuResultEntity {
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    public void setSf10ge(String sf10ge) {
+        this.sf10ge = sf10ge.trim();
+    }
+
+    public void setSsds(String ssds) {
+        this.ssds = ssds.trim();
+    }
+
+    public void setSsqx(String ssqx) {
+        this.ssqx = ssqx.trim();
+    }
+
+    public void setDkmc(String dkmc) {
+        this.dkmc = dkmc.trim();
+    }
+
+    public void setSssblx(String sssblx) {
+        this.sssblx = sssblx.trim();
+    }
+
+    public void setDkzt(String dkzt) {
+        this.dkzt = dkzt.trim();
+    }
+
+    public void setDkyt(String dkyt) {
+        this.dkyt = dkyt.trim();
+    }
+
+    public void setDklx(String dklx) {
+        this.dklx = dklx.trim();
+    }
+
+    public void setCjmc(String cjmc) {
+        this.cjmc = cjmc.trim();
+    }
+
+    public void setSssbmc(String sssbmc) {
+        this.sssbmc = sssbmc.trim();
+    }
+
+    public void setWltx(String wltx) {
+        this.wltx = wltx.trim();
+    }
+
+    public void setSl(String sl) {
+        this.sl = sl.trim();
+    }
+
+    public void setSsbk(String ssbk) {
+        this.ssbk = ssbk.trim();
+    }
+
+    public void setDkbh(String dkbh) {
+        this.dkbh = dkbh.trim();
+    }
+
+    public void setCzjkyhl(String czjkyhl) {
+        this.czjkyhl = czjkyhl.trim();
+    }
+
+    public void setXlfttbonusl(String xlfttbonusl) {
+        this.xlfttbonusl = xlfttbonusl.trim();
+    }
+
+    public void setXlftthonusl(String xlftthonusl) {
+        this.xlftthonusl = xlftthonusl.trim();
+    }
+
+    public void setSfslk(String sfslk) {
+        this.sfslk = sfslk.trim();
+    }
+
+    public void setDkywlx(String dkywlx) {
+        this.dkywlx = dkywlx.trim();
+    }
+
+    public void setZwym(String zwym) {
+        this.zwym = zwym.trim();
+    }
+
+    public void setSfzcfy(String sfzcfy) {
+        this.sfzcfy = sfzcfy.trim();
+    }
+
+    public void setSfbs(String sfbs) {
+        this.sfbs = sfbs.trim();
+    }
+
+    public void setIp(String ip) {
+        this.ip = ip.trim();
+    }
+
+    public void setJklx(String jklx) {
+        this.jklx = jklx.trim();
+    }
+
+    public void setWynbbm(String wynbbm) {
+        this.wynbbm = wynbbm.trim();
+    }
+
+    public void setSjzlzrrgc(String sjzlzrrgc) {
+        this.sjzlzrrgc = sjzlzrrgc.trim();
+    }
+
+    public void setYxsjwhrdw(String yxsjwhrdw) {
+        this.yxsjwhrdw = yxsjwhrdw.trim();
+    }
+
+    public void setSjzlzrrqx(String sjzlzrrqx) {
+        this.sjzlzrrqx = sjzlzrrqx.trim();
+    }
+
+    public void setSjzlzrrzw(String sjzlzrrzw) {
+        this.sjzlzrrzw = sjzlzrrzw.trim();
+    }
+
+    public void setSjc(String sjc) {
+        this.sjc = sjc.trim();
+    }
+
+    public void setCsr(String csr) {
+        this.csr = csr.trim();
+    }
+
+    public void setCjsj(String cjsj) {
+        this.cjsj = cjsj.trim();
+    }
+
+    public void setXgr(String xgr) {
+        this.xgr = xgr.trim();
+    }
+
+    public void setXgsj(String xgsj) {
+        this.xgsj = xgsj.trim();
+    }
+
+    public void setSfhg(String sfhg) {
+        this.sfhg = sfhg.trim();
+    }
+
+    public void setCwlx(String cwlx) {
+        this.cwlx = cwlx.trim();
+    }
+
+    public void setSfygcj(String sfygcj) {
+        this.sfygcj = sfygcj.trim();
+    }
+
+    public void setOdfddfdz(String odfddfdz) {
+        this.odfddfdz = odfddfdz.trim();
+    }
+
+    public void setChangeTaskId(String changeTaskId) {
+        this.changeTaskId = changeTaskId.trim();
     }
 }

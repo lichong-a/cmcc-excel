@@ -24,6 +24,7 @@ import java.util.Objects;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class FgqPortResultEntity {
 
     @Id
@@ -79,7 +80,7 @@ public class FgqPortResultEntity {
      * 资管中文名称
      */
     @ExcelProperty(value = "资管中文名称", index = 9)
-    private String zglwmc;
+    private String zgzwmc;
     /**
      * 端口用途
      */
@@ -186,5 +187,117 @@ public class FgqPortResultEntity {
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    public void setSsds(String ssds) {
+        this.ssds = ssds.trim();
+    }
+
+    public void setSsqx(String ssqx) {
+        this.ssqx = ssqx.trim();
+    }
+
+    public void setSsyxqy(String ssyxqy) {
+        this.ssyxqy = ssyxqy.trim();
+    }
+
+    public void setSssbmc(String sssbmc) {
+        this.sssbmc = sssbmc.trim();
+    }
+
+    public void setMc(String mc) {
+        this.mc = mc.trim();
+    }
+
+    public void setDkbh(String dkbh) {
+        this.dkbh = dkbh.trim();
+    }
+
+    public void setDkxlh(String dkxlh) {
+        this.dkxlh = dkxlh.trim();
+    }
+
+    public void setHang(String hang) {
+        this.hang = hang.trim();
+    }
+
+    public void setLie(String lie) {
+        this.lie = lie.trim();
+    }
+
+    public void setZgzwmc(String zgzwmc) {
+        this.zgzwmc = zgzwmc.trim();
+    }
+
+    public void setDkyt(String dkyt) {
+        this.dkyt = dkyt.trim();
+    }
+
+    public void setDkzt(String dkzt) {
+        this.dkzt = dkzt.trim();
+    }
+
+    public void setDkwhzt(String dkwhzt) {
+        this.dkwhzt = dkwhzt.trim();
+    }
+
+    public void setQccs(String qccs) {
+        this.qccs = qccs.trim();
+    }
+
+    public void setSjmc(String sjmc) {
+        this.sjmc = sjmc.trim();
+    }
+
+    public void setSjc(String sjc) {
+        this.sjc = sjc.trim();
+    }
+
+    public void setWynbbm(String wynbbm) {
+        this.wynbbm = wynbbm.trim();
+    }
+
+    public void setCjr(String cjr) {
+        this.cjr = cjr.trim();
+    }
+
+    public void setCjsj(String cjsj) {
+        this.cjsj = cjsj.trim();
+    }
+
+    public void setXgr(String xgr) {
+        this.xgr = xgr.trim();
+    }
+
+    public void setXgsj(String xgsj) {
+        this.xgsj = xgsj.trim();
+    }
+
+    public void setSfsd(String sfsd) {
+        this.sfsd = sfsd.trim();
+    }
+
+    public void setCwlx(String cwlx) {
+        this.cwlx = cwlx.trim();
+    }
+
+    public void setSjzlzrrgc(String sjzlzrrgc) {
+        this.sjzlzrrgc = sjzlzrrgc.trim();
+    }
+
+    public void setSjzlzrrds(String sjzlzrrds) {
+        this.sjzlzrrds = sjzlzrrds.trim();
+    }
+
+    public void setSjzlzrrqx(String sjzlzrrqx) {
+        this.sjzlzrrqx = sjzlzrrqx.trim();
+    }
+
+    public void setSfygcj(String sfygcj) {
+        this.sfygcj = sfygcj.trim();
+    }
+
+    public void setYxsjwhr(String yxsjwhr) {
+        this.yxsjwhr = yxsjwhr.trim();
     }
 }

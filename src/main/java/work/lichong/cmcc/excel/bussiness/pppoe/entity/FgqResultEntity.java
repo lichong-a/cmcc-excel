@@ -24,6 +24,7 @@ import java.util.Objects;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class FgqResultEntity {
 
     @Id
@@ -306,5 +307,213 @@ public class FgqResultEntity {
     @Override
     public int hashCode() {
         return getClass().hashCode();
+    }
+
+    public void setWynbbm(String wynbbm) {
+        this.wynbbm = wynbbm.trim();
+    }
+
+    public void setSsds(String ssds) {
+        this.ssds = ssds.trim();
+    }
+
+    public void setSsqx(String ssqx) {
+        this.ssqx = ssqx.trim();
+    }
+
+    public void setSsyxqy(String ssyxqy) {
+        this.ssyxqy = ssyxqy.trim();
+    }
+
+    public void setSsxq(String ssxq) {
+        this.ssxq = ssxq.trim();
+    }
+
+    public void setZgzwmc(String zgzwmc) {
+        this.zgzwmc = zgzwmc.trim();
+    }
+
+    public void setYwlx(String ywlx) {
+        this.ywlx = ywlx.trim();
+    }
+
+    public void setAzwz(String azwz) {
+        this.azwz = azwz.trim();
+    }
+
+    public void setSsdxmc(String ssdxmc) {
+        this.ssdxmc = ssdxmc.trim();
+    }
+
+    public void setSsdxlx(String ssdxlx) {
+        this.ssdxlx = ssdxlx.trim();
+    }
+
+    public void setMc(String mc) {
+        this.mc = mc.trim();
+    }
+
+    public void setXmbh(String xmbh) {
+        this.xmbh = xmbh.trim();
+    }
+
+    public void setRwmc(String rwmc) {
+        this.rwmc = rwmc.trim();
+    }
+
+    public void setFgb(String fgb) {
+        this.fgb = fgb.trim();
+    }
+
+    public void setZyolt(String zyolt) {
+        this.zyolt = zyolt.trim();
+    }
+
+    public void setZyoltPon(String zyoltPon) {
+        this.zyoltPon = zyoltPon.trim();
+    }
+
+    public void setWyzt(String wyzt) {
+        this.wyzt = wyzt.trim();
+    }
+
+    public void setCqgs(String cqgs) {
+        this.cqgs = cqgs.trim();
+    }
+
+    public void setGldw(String gldw) {
+        this.gldw = gldw.trim();
+    }
+
+    public void setSbxh(String sbxh) {
+        this.sbxh = sbxh.trim();
+    }
+
+    public void setSjPosMc(String sjPosMc) {
+        this.sjPosMc = sjPosMc.trim();
+    }
+
+    public void setSjsbsfwPos(String sjsbsfwPos) {
+        this.sjsbsfwPos = sjsbsfwPos.trim();
+    }
+
+    public void setSjPosPort(String sjPosPort) {
+        this.sjPosPort = sjPosPort.trim();
+    }
+
+    public void setJb(String jb) {
+        this.jb = jb.trim();
+    }
+
+    public void setCs(String cs) {
+        this.cs = cs.trim();
+    }
+
+    public void setFgqy(String fgqy) {
+        this.fgqy = fgqy.trim();
+    }
+
+    public void setByOlt(String byOlt) {
+        this.byOlt = byOlt.trim();
+    }
+
+    public void setByOltPon(String byOltPon) {
+        this.byOltPon = byOltPon.trim();
+    }
+
+    public void setZcbh(String zcbh) {
+        this.zcbh = zcbh.trim();
+    }
+
+    public void setWzms(String wzms) {
+        this.wzms = wzms.trim();
+    }
+
+    public void setEwm(String ewm) {
+        this.ewm = ewm.trim();
+    }
+
+    public void setCjmc(String cjmc) {
+        this.cjmc = cjmc.trim();
+    }
+
+    public void setYszt(String yszt) {
+        this.yszt = yszt.trim();
+    }
+
+    public void setWtgyy(String wtgyy) {
+        this.wtgyy = wtgyy.trim();
+    }
+
+    public void setSjc(String sjc) {
+        this.sjc = sjc.trim();
+    }
+
+    public void setXgsj(String xgsj) {
+        this.xgsj = xgsj.trim();
+    }
+
+    public void setWynbbm2(String wynbbm2) {
+        this.wynbbm2 = wynbbm2.trim();
+    }
+
+    public void setCjr(String cjr) {
+        this.cjr = cjr.trim();
+    }
+
+    public void setCjsj(String cjsj) {
+        this.cjsj = cjsj.trim();
+    }
+
+    public void setXgr(String xgr) {
+        this.xgr = xgr.trim();
+    }
+
+    public void setSfhg(String sfhg) {
+        this.sfhg = sfhg.trim();
+    }
+
+    public void setCwlx(String cwlx) {
+        this.cwlx = cwlx.trim();
+    }
+
+    public void setJw(String jw) {
+        this.jw = jw.trim();
+    }
+
+    public void setJd(String jd) {
+        this.jd = jd.trim();
+    }
+
+    public void setSjzlzrrgc(String sjzlzrrgc) {
+        this.sjzlzrrgc = sjzlzrrgc.trim();
+    }
+
+    public void setSjzlzrrds(String sjzlzrrds) {
+        this.sjzlzrrds = sjzlzrrds.trim();
+    }
+
+    public void setSjzlzrrqx(String sjzlzrrqx) {
+        this.sjzlzrrqx = sjzlzrrqx.trim();
+    }
+
+    public void setChangeTaskId(String changeTaskId) {
+        this.changeTaskId = changeTaskId.trim();
+    }
+
+    public void setYxsjwhr(String yxsjwhr) {
+        this.yxsjwhr = yxsjwhr.trim();
+    }
+
+    public void setSlPonSf10Ge(String slPonSf10Ge) {
+        this.slPonSf10Ge = slPonSf10Ge.trim();
+    }
+
+    public void setWhds(String whds) {
+        this.whds = whds.trim();
+    }
+
+    public void setWhqx(String whqx) {
+        this.whqx = whqx.trim();
     }
 }
