@@ -21,7 +21,7 @@ public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity>
     /**
      * 每隔5条存储数据库，实际使用中可以100条，然后清理list ，方便内存回收
      */
-    private static final int BATCH_COUNT = 200;
+    private static final int BATCH_COUNT = 1000;
     /**
      * 缓存的数据
      */
@@ -57,6 +57,14 @@ public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity>
      */
     @Override
     public void doAfterAllAnalysed(AnalysisContext analysisContext) {
+        saveData();
         log.info("OnuResultExcel所有数据解析完成！");
+    }
+
+    /**
+     * 加上存储数据库
+     */
+    private void saveData() {
+        repository.saveAllAndFlush(cachedDataList);
     }
 }

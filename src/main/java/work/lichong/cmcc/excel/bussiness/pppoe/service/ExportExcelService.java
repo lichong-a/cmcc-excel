@@ -1,8 +1,10 @@
 package work.lichong.cmcc.excel.bussiness.pppoe.service;
 
+import cn.hutool.core.collection.CollUtil;
 import com.alibaba.excel.EasyExcelFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 import work.lichong.cmcc.excel.bussiness.pppoe.dao.*;
 import work.lichong.cmcc.excel.bussiness.pppoe.entity.*;
@@ -14,8 +16,8 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author ric
@@ -39,7 +41,7 @@ public class ExportExcelService {
     private Set<ResultEntity> computeResults() {
         Set<ResultEntity> results = new HashSet<>();
         List<PppoeEntity> pppoes = pppoeRepository.findAll();
-        pppoes.forEach(pppoe -> {
+        pppoes.parallelStream().forEach(pppoe -> {
             ResultEntity result = new ResultEntity();
             // 地市
             result.setDs(pppoe.getDs());
@@ -54,49 +56,63 @@ public class ExportExcelService {
                     .builder()
                     .ip(hdIp)
                     .build());
-            Optional<OltResultEntity> oltOptional = oltResultRepository.findOne(oltResultEntityExample);
-            oltOptional.ifPresent(olt -> {
-                // 中文名称
-                String zwmc = olt.getZwmc();
-                // 在第三步Excel中，根据《之前的中文名称》《话单PON口》得出《端口名称》
-                Example<OnuResultEntity> onuResultEntityExample = Example.of(OnuResultEntity
+            List<OltResultEntity> olts = oltResultRepository.findAll(oltResultEntityExample);
+            if (CollUtil.isEmpty(olts)) {
+                return;
+            }
+            OltResultEntity olt = olts.get(0);
+            // 中文名称
+            String zwmc = olt.getZwmc();
+            // 在第三步Excel中，根据《之前的中文名称》《话单PON口》得出《端口名称》
+            Example<OnuResultEntity> onuResultEntityExample = Example.of(OnuResultEntity
+                    .builder()
+                    .sssbmc(zwmc)
+                    .dkbh(hdPon)
+                    .build());
+            List<OnuResultEntity> onus = onuResultRepository.findAll(onuResultEntityExample);
+            if (CollUtil.isEmpty(onus)) {
+                return;
+            }
+            OnuResultEntity onu = onus.get(0);
+            // 端口名称
+            String dkmc = onu.getDkmc();
+            // 在第四步Excel中，根据《端口名称》查询《网元状态》（在网）并且《级别》（二级）的《资管中文名称》和《网元编码》，得出任意一个即可
+            Example<FgqResultEntity> fgqResultEntityExample = Example.of(FgqResultEntity
+                    .builder()
+                    .zyoltPon(dkmc)
+                    .wyzt("在网")
+                    .jb("二级")
+                    .build());
+            List<FgqResultEntity> fgqs = fgqResultRepository.findAll(fgqResultEntityExample);
+            if (CollUtil.isEmpty(fgqs)) {
+                return;
+            }
+            AtomicBoolean isAdd = new AtomicBoolean(false);
+            fgqs.forEach(fgq -> {
+                // 资管中文名称
+                String zgzwmc = fgq.getZgzwmc();
+                // 网元内部编码
+                String wynbbm = fgq.getWynbbm();
+                result.setFgqmc(zgzwmc);
+                result.setFgqwynbbm(wynbbm);
+                // 根据找到的分光器，在第五步Excel中筛选其中《端口状态》为空闲的分光器端口，最终得出任意一空闲端口即可。得到《名称》和《网元编码》。如果没有空闲口，返回上一步重新运行
+                ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("zgzwmc",ExampleMatcher.GenericPropertyMatchers.startsWith());
+                Example<FgqPortResultEntity> fgqPortResultEntityExample = Example.of(FgqPortResultEntity
                         .builder()
-                        .sssbmc(zwmc)
-                        .dkbh(hdPon)
-                        .build());
-                Optional<OnuResultEntity> onuOptional = onuResultRepository.findOne(onuResultEntityExample);
-                onuOptional.ifPresent(onu -> {
-                    // 端口名称
-                    String dkmc = onu.getDkmc();
-                    // 在第四步Excel中，根据《端口名称》查询《网元状态》（在网）并且《级别》（二级）的《资管中文名称》和《网元编码》，得出任意一个即可
-                    Example<FgqResultEntity> fgqResultEntityExample = Example.of(FgqResultEntity
-                            .builder()
-                            .zyoltPon(dkmc)
-                            .wyzt("在网")
-                            .jb("二级")
-                            .build());
-                    Optional<FgqResultEntity> fgqOptional = fgqResultRepository.findOne(fgqResultEntityExample);
-                    fgqOptional.ifPresent(fgq -> {
-                        // 资管中文名称
-                        String zgzwmc = fgq.getZgzwmc();
-                        // 网元内部编码
-                        String wynbbm = fgq.getWynbbm();
-                        result.setFgqmc(zgzwmc);
-                        result.setFgqwynbbm(wynbbm);
-                        // 根据找到的分光器，在第五步Excel中筛选其中《端口状态》为空闲的分光器端口，最终得出任意一空闲端口即可。得到《名称》和《网元编码》。如果没有空闲口，返回上一步重新运行
-                        Example<FgqPortResultEntity> fgqPortResultEntityExample = Example.of(FgqPortResultEntity
-                                .builder()
-                                .wynbbm(wynbbm)
-                                .dkzt("空闲")
-                                .build());
-                        Optional<FgqPortResultEntity> fgqPortOptional = fgqPortResultRepository.findOne(fgqPortResultEntityExample);
-                        fgqPortOptional.ifPresent(fgqPort -> {
-                            result.setFgqdkmc(fgqPort.getMc());
-                            result.setFgqdkwynbbm(fgqPort.getWynbbm());
-                            results.add(result);
-                        });
-                    });
-                });
+                        .zgzwmc(zgzwmc)
+                        .dkzt("空闲")
+                        .build(), matcher);
+                List<FgqPortResultEntity> fgqPorts = fgqPortResultRepository.findAll(fgqPortResultEntityExample);
+                if (CollUtil.isEmpty(fgqPorts)) {
+                    return;
+                }
+                if (!isAdd.get()) {
+                    FgqPortResultEntity fgqPort = fgqPorts.get(0);
+                    result.setFgqdkmc(fgqPort.getMc());
+                    result.setFgqdkwynbbm(fgqPort.getWynbbm());
+                    results.add(result);
+                    isAdd.set(true);
+                }
             });
         });
         return results;

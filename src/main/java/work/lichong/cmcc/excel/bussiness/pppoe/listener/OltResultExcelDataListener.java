@@ -19,7 +19,7 @@ public class OltResultExcelDataListener implements ReadListener<OltResultEntity>
     /**
      * 每隔5条存储数据库，实际使用中可以100条，然后清理list ，方便内存回收
      */
-    private static final int BATCH_COUNT = 200;
+    private static final int BATCH_COUNT = 1000;
     /**
      * 缓存的数据
      */
@@ -55,6 +55,15 @@ public class OltResultExcelDataListener implements ReadListener<OltResultEntity>
      */
     @Override
     public void doAfterAllAnalysed(AnalysisContext analysisContext) {
+        // 这里也要保存数据，确保最后遗留的数据也存储到数据库
+        saveData();
         log.info("OltResultExcel所有数据解析完成！");
+    }
+
+    /**
+     * 加上存储数据库
+     */
+    private void saveData() {
+        repository.saveAllAndFlush(cachedDataList);
     }
 }
