@@ -25,7 +25,7 @@ public class OltResultExcelDataListener implements ReadListener<OltResultEntity>
      */
     private List<OltResultEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
 
-    private OltResultRepository repository;
+    private final OltResultRepository repository;
 
     public OltResultExcelDataListener(OltResultRepository repository) {
         this.repository = repository;

@@ -17,7 +17,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
  * @author ric
@@ -87,8 +86,7 @@ public class ExportExcelService {
             if (CollUtil.isEmpty(fgqs)) {
                 return;
             }
-            AtomicBoolean isAdd = new AtomicBoolean(false);
-            fgqs.forEach(fgq -> {
+            for (FgqResultEntity fgq : fgqs) {
                 // 资管中文名称
                 String zgzwmc = fgq.getZgzwmc();
                 // 网元内部编码
@@ -106,14 +104,11 @@ public class ExportExcelService {
                 if (CollUtil.isEmpty(fgqPorts)) {
                     return;
                 }
-                if (!isAdd.get()) {
-                    FgqPortResultEntity fgqPort = fgqPorts.get(0);
-                    result.setFgqdkmc(fgqPort.getMc());
-                    result.setFgqdkwynbbm(fgqPort.getWynbbm());
-                    results.add(result);
-                    isAdd.set(true);
-                }
-            });
+                FgqPortResultEntity fgqPort = fgqPorts.get(0);
+                result.setFgqdkmc(fgqPort.getMc());
+                result.setFgqdkwynbbm(fgqPort.getWynbbm());
+                results.add(result);
+            }
         });
         return results;
     }
@@ -124,7 +119,7 @@ public class ExportExcelService {
 	        response.setCharacterEncoding("utf-8");
 	        // 这里URLEncoder.encode可以防止中文乱码
 	        String fileName;
-			fileName = URLEncoder.encode("结果", StandardCharsets.UTF_8).replace("\\+", "%20");
+			fileName = URLEncoder.encode("PPPOE-结果", StandardCharsets.UTF_8).replace("\\+", "%20");
 	        response.setHeader("Content-disposition", "attachment;filename*=" + fileName + ".xlsx");
             EasyExcelFactory.write(response.getOutputStream(), ResultEntity.class).sheet("结果").doWrite(computeResults());
     	} catch (Exception e) {

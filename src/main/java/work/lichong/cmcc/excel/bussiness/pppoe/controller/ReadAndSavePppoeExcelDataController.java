@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 @RequestMapping("/api/read")
-public class ReadAndSaveExcelDataController {
+public class ReadAndSavePppoeExcelDataController {
 
     @Autowired
     ReadAndSaveExcelDataService service;

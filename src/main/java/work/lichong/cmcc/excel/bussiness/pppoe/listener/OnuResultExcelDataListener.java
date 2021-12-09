@@ -27,7 +27,7 @@ public class OnuResultExcelDataListener implements ReadListener<OnuResultEntity>
      */
     private List<OnuResultEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
 
-    private OnuResultRepository repository;
+    private final OnuResultRepository repository;
 
     public OnuResultExcelDataListener(OnuResultRepository repository) {
         this.repository = repository;

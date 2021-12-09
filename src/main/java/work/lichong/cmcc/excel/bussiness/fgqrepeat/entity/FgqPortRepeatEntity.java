@@ -1,4 +1,4 @@
-package work.lichong.cmcc.excel.bussiness.pppoe.entity;
+package work.lichong.cmcc.excel.bussiness.fgqrepeat.entity;
 
 import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
@@ -12,10 +12,8 @@ import javax.persistence.Id;
 import java.util.Objects;
 
 /**
- * 第一步，PPPOE+和综资差异明细表格
- *
  * @author ric
- * @date 2021年11月30日 23:35
+ * @date 2021年12月09日 20:21
  * @website https://lichong.work
  */
 @Entity
@@ -24,12 +22,14 @@ import java.util.Objects;
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class PppoeEntity {
+@Builder
+public class FgqPortRepeatEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @ExcelIgnore
     private Long id;
+
     /**
      * 地市
      */
@@ -41,6 +41,11 @@ public class PppoeEntity {
     @ExcelProperty(value = "区县")
     private String qx;
     /**
+     * 营销区域
+     */
+    @ExcelProperty(value = "营销区域")
+    private String yxqy;
+    /**
      * 小区ID
      */
     @ExcelProperty(value = "小区ID")
@@ -51,36 +56,31 @@ public class PppoeEntity {
     @ExcelProperty(value = "小区名称")
     private String xqmc;
     /**
-     * 客户表宽带账号
+     * 分光器端口ID
      */
-    @ExcelProperty(value = "客户表宽带账号")
-    private String khbkdzh;
+    @ExcelProperty(value = "分光器端口ID")
+    private String fgqdkid;
     /**
-     * 话单宽带账号
+     * 分光器端口名称
      */
-    @ExcelProperty(value = "话单宽带账号")
-    private String hdkdzh;
+    @ExcelProperty(value = "分光器端口名称")
+    private String fgqdkmc;
     /**
-     * 话单IP
+     * 被占用名称
      */
-    @ExcelProperty(value = "话单IP")
-    private String hdIp;
+    @ExcelProperty(value = "被占用名称")
+    private String bzymc;
     /**
-     * 话单PON口
+     * 被占用ID
      */
-    @ExcelProperty(value = "话单PON口")
-    private String hdPon;
+    @ExcelProperty(value = "被占用ID")
+    private String bzyid;
     /**
-     * IP
+     * 被占用的模型
      */
-    @ExcelProperty(value = "IP")
-    private String ip;
-    /**
-     * PON口
-     */
-    @ExcelProperty(value = "PON口")
-    private String pon;
-
+    @ExcelProperty(value = "被占用的模型")
+    private String bzydmx;
+    
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -89,7 +89,7 @@ public class PppoeEntity {
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) {
             return false;
         }
-        PppoeEntity that = (PppoeEntity) o;
+        FgqPortRepeatEntity that = (FgqPortRepeatEntity) o;
         return id != null && Objects.equals(id, that.id);
     }
 
@@ -106,6 +106,10 @@ public class PppoeEntity {
         this.qx = qx.trim();
     }
 
+    public void setYxqy(String yxqy) {
+        this.yxqy = yxqy.trim();
+    }
+
     public void setXqId(String xqId) {
         this.xqId = xqId.trim();
     }
@@ -114,27 +118,23 @@ public class PppoeEntity {
         this.xqmc = xqmc.trim();
     }
 
-    public void setKhbkdzh(String khbkdzh) {
-        this.khbkdzh = khbkdzh.trim();
+    public void setFgqdkid(String fgqdkid) {
+        this.fgqdkid = fgqdkid.trim();
     }
 
-    public void setHdkdzh(String hdkdzh) {
-        this.hdkdzh = hdkdzh.trim();
+    public void setFgqdkmc(String fgqdkmc) {
+        this.fgqdkmc = fgqdkmc.trim();
     }
 
-    public void setHdIp(String hdIp) {
-        this.hdIp = hdIp.trim();
+    public void setBzymc(String bzymc) {
+        this.bzymc = bzymc.trim();
     }
 
-    public void setHdPon(String hdPon) {
-        this.hdPon = hdPon.trim();
+    public void setBzyid(String bzyid) {
+        this.bzyid = bzyid.trim();
     }
 
-    public void setIp(String ip) {
-        this.ip = ip.trim();
-    }
-
-    public void setPon(String pon) {
-        this.pon = pon.trim();
+    public void setBzydmx(String bzydmx) {
+        this.bzydmx = bzydmx.trim();
     }
 }

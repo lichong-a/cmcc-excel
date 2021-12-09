@@ -1,11 +1,11 @@
-package work.lichong.cmcc.excel.bussiness.pppoe.listener;
+package work.lichong.cmcc.excel.bussiness.fgqrepeat.listener;
 
 import com.alibaba.excel.context.AnalysisContext;
 import com.alibaba.excel.read.listener.ReadListener;
 import com.alibaba.excel.util.ListUtils;
 import lombok.extern.slf4j.Slf4j;
-import work.lichong.cmcc.excel.bussiness.pppoe.dao.FgqPortResultRepository;
-import work.lichong.cmcc.excel.bussiness.pppoe.entity.FgqPortResultEntity;
+import work.lichong.cmcc.excel.bussiness.fgqrepeat.dao.FgqPortRepeatRepository;
+import work.lichong.cmcc.excel.bussiness.fgqrepeat.entity.FgqPortRepeatEntity;
 
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
  * @website https://lichong.work
  */
 @Slf4j
-public class FgpPortResultExcelDataListener implements ReadListener<FgqPortResultEntity> {
+public class FgqPortRepeatExcelDataListener implements ReadListener<FgqPortRepeatEntity> {
     /**
      * 每隔5条存储数据库，实际使用中可以100条，然后清理list ，方便内存回收
      */
@@ -23,11 +23,11 @@ public class FgpPortResultExcelDataListener implements ReadListener<FgqPortResul
     /**
      * 缓存的数据
      */
-    private List<FgqPortResultEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
+    private List<FgqPortRepeatEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
 
-    private final FgqPortResultRepository repository;
+    private final FgqPortRepeatRepository repository;
 
-    public FgpPortResultExcelDataListener(FgqPortResultRepository repository) {
+    public FgqPortRepeatExcelDataListener(FgqPortRepeatRepository repository) {
         this.repository = repository;
     }
 
@@ -38,7 +38,7 @@ public class FgpPortResultExcelDataListener implements ReadListener<FgqPortResul
      * @param analysisContext
      */
     @Override
-    public void invoke(FgqPortResultEntity data, AnalysisContext analysisContext) {
+    public void invoke(FgqPortRepeatEntity data, AnalysisContext analysisContext) {
         cachedDataList.add(data);
         // 达到BATCH_COUNT了，需要去存储一次数据库，防止数据几万条数据在内存，容易OOM
         if (cachedDataList.size() >= BATCH_COUNT) {

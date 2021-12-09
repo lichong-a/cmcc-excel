@@ -1,10 +1,10 @@
-package work.lichong.cmcc.excel.bussiness.pppoe.controller;
+package work.lichong.cmcc.excel.bussiness.fgqrepeat.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import work.lichong.cmcc.excel.bussiness.pppoe.service.ExportExcelService;
+import work.lichong.cmcc.excel.bussiness.fgqrepeat.service.ExportFgqExcelService;
 import work.lichong.cmcc.excel.common.bean.Result;
 import work.lichong.cmcc.excel.common.exception.ExportException;
 import work.lichong.cmcc.excel.common.result.ResponseStatus;
@@ -19,14 +19,14 @@ import javax.servlet.http.HttpServletResponse;
  */
 @RestController
 @RequestMapping("/api/export")
-public class ExportExcelController {
+public class ExportFgqExcelController {
 
     @Autowired
-    ExportExcelService exportExcelService;
+    ExportFgqExcelService exportFgqExcelService;
 
-    @PostMapping("/pppoe")
-    public String exportPppoeExcel(HttpServletResponse response) throws ExportException {
-        exportExcelService.exportPppoeResult(response);
+    @PostMapping("/fgqPortRepeat")
+    public String exportFgqPortRepeatExcel(HttpServletResponse response) throws ExportException {
+        exportFgqExcelService.exportFgqPortRepeatResult(response);
         return ResponseUtil.toString(new Result<>(ResponseStatus.RESPONSE_2XX_OK));
     }
 }

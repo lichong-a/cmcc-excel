@@ -25,7 +25,7 @@ public class PppoeExcelDataListener implements ReadListener<PppoeEntity> {
      */
     private List<PppoeEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
 
-    private PppoeRepository repository;
+    private final PppoeRepository repository;
     public PppoeExcelDataListener(PppoeRepository repository) {
         this.repository = repository;
     }

@@ -34,147 +34,142 @@ public class FgqPortResultEntity {
     /**
      * 网元内部编码
      */
-    @ExcelProperty(value = "网元内部编码", index = 0)
+    @ExcelProperty(value = "网元内部编码")
     private String wynbbm;
     /**
      * 所属地市
      */
-    @ExcelProperty(value = "所属地市", index = 1)
+    @ExcelProperty(value = "所属地市")
     private String ssds;
     /**
      * 所属区县
      */
-    @ExcelProperty(value = "所属区县", index = 2)
+    @ExcelProperty(value = "所属区县")
     private String ssqx;
     /**
      * 所属营销区域
      */
-    @ExcelProperty(value = "所属营销区域", index = 3)
+    @ExcelProperty(value = "所属营销区域")
     private String ssyxqy;
     /**
      * 所属设备名称
      */
-    @ExcelProperty(value = "所属设备名称", index = 4)
+    @ExcelProperty(value = "所属设备名称")
     private String sssbmc;
     /**
      * 名称
      */
-    @ExcelProperty(value = "名称", index = 5)
+    @ExcelProperty(value = "名称")
     private String mc;
     /**
      * 端口编号
      */
-    @ExcelProperty(value = "端口编号", index = 6)
+    @ExcelProperty(value = "端口编号")
     private String dkbh;
     /**
      * 端口序列号
      */
-    @ExcelProperty(value = "端口序列号", index = 7)
+    @ExcelProperty(value = "端口序列号")
     private String dkxlh;
     /**
      * 行
      */
-    @ExcelProperty(value = "行", index = 8)
+    @ExcelProperty(value = "行")
     private String hang;
     /**
      * 列
      */
-    @ExcelProperty(value = "列", index = 9)
+    @ExcelProperty(value = "列")
     private String lie;
     /**
      * 资管中文名称
      */
-    @ExcelProperty(value = "资管中文名称", index = 10)
+    @ExcelProperty(value = "资管中文名称")
     private String zgzwmc;
     /**
      * 端口用途
      */
-    @ExcelProperty(value = "端口用途", index = 11)
+    @ExcelProperty(value = "端口用途")
     private String dkyt;
     /**
      * 端口状态
      */
-    @ExcelProperty(value = "端口状态", index = 12)
+    @ExcelProperty(value = "端口状态")
     private String dkzt;
     /**
      * 端口维护状态
      */
-    @ExcelProperty(value = "端口维护状态", index = 13)
+    @ExcelProperty(value = "端口维护状态")
     private String dkwhzt;
     /**
      * 清查次数
      */
-    @ExcelProperty(value = "清查次数", index = 14)
+    @ExcelProperty(value = "清查次数")
     private String qccs;
     /**
      * 采集名称
      */
-    @ExcelProperty(value = "采集名称", index = 15)
+    @ExcelProperty(value = "采集名称")
     private String sjmc;
     /**
      * 时间戳
      */
-    @ExcelProperty(value = "时间戳", index = 16)
+    @ExcelProperty(value = "时间戳")
     private String sjc;
-    /**
-     * 网元内部编码
-     */
-    @ExcelProperty(value = "网元内部编码", index = 17)
-    private String wynbbm2;
     /**
      * 创建人
      */
-    @ExcelProperty(value = "创建人", index = 18)
+    @ExcelProperty(value = "创建人")
     private String cjr;
     /**
      * 创建时间
      */
-    @ExcelProperty(value = "创建时间", index = 19)
+    @ExcelProperty(value = "创建时间")
     private String cjsj;
     /**
      * 修改人
      */
-    @ExcelProperty(value = "修改人", index = 20)
+    @ExcelProperty(value = "修改人")
     private String xgr;
     /**
      * 修改时间
      */
-    @ExcelProperty(value = "修改时间", index = 21)
+    @ExcelProperty(value = "修改时间")
     private String xgsj;
     /**
      * 是否合格
      */
-    @ExcelProperty(value = "是否合格", index = 22)
+    @ExcelProperty(value = "是否合格")
     private String sfsd;
     /**
      * 错误类型
      */
-    @ExcelProperty(value = "错误类型", index = 23)
+    @ExcelProperty(value = "错误类型")
     private String cwlx;
     /**
      * 数据质量责任人(工程)
      */
-    @ExcelProperty(value = "数据质量责任人(工程)", index = 24)
+    @ExcelProperty(value = "数据质量责任人(工程)")
     private String sjzlzrrgc;
     /**
      * 数据质量责任人(地市)
      */
-    @ExcelProperty(value = "数据质量责任人(地市)", index = 25)
+    @ExcelProperty(value = "数据质量责任人(地市)")
     private String sjzlzrrds;
     /**
      * 数据质量责任人(区县)
      */
-    @ExcelProperty(value = "数据质量责任人(区县)", index = 26)
+    @ExcelProperty(value = "数据质量责任人(区县)")
     private String sjzlzrrqx;
     /**
      * 是否有过拆机
      */
-    @ExcelProperty(value = "是否有过拆机", index = 27)
+    @ExcelProperty(value = "是否有过拆机")
     private String sfygcj;
     /**
      * 一线数据维护人（代维一线）
      */
-    @ExcelProperty(value = "一线数据维护人（代维一线）", index = 28)
+    @ExcelProperty(value = "一线数据维护人（代维一线）")
     private String yxsjwhr;
 
     @Override

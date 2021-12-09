@@ -25,7 +25,7 @@ public class FgpResultExcelDataListener implements ReadListener<FgqResultEntity>
      */
     private List<FgqResultEntity> cachedDataList = ListUtils.newArrayListWithExpectedSize(BATCH_COUNT);
 
-    private FgqResultRepository repository;
+    private final FgqResultRepository repository;
 
     public FgpResultExcelDataListener(FgqResultRepository repository) {
         this.repository = repository;

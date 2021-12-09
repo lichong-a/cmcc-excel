@@ -34,262 +34,257 @@ public class FgqResultEntity {
     /**
      * 网元内部编码
      */
-    @ExcelProperty(value = "网元内部编码", index = 0)
+    @ExcelProperty(value = "网元内部编码")
     private String wynbbm;
     /**
      * 所属地市
      */
-    @ExcelProperty(value = "所属地市", index = 1)
+    @ExcelProperty(value = "所属地市")
     private String ssds;
     /**
      * 所属区县
      */
-    @ExcelProperty(value = "所属区县", index = 2)
+    @ExcelProperty(value = "所属区县")
     private String ssqx;
     /**
      * 所属营销区域
      */
-    @ExcelProperty(value = "所属营销区域", index = 3)
+    @ExcelProperty(value = "所属营销区域")
     private String ssyxqy;
     /**
      * 所属小区
      */
-    @ExcelProperty(value = "所属小区", index = 4)
+    @ExcelProperty(value = "所属小区")
     private String ssxq;
     /**
      * 资管中文名称
      */
-    @ExcelProperty(value = "资管中文名称", index = 5)
+    @ExcelProperty(value = "资管中文名称")
     private String zgzwmc;
     /**
      * 业务类型
      */
-    @ExcelProperty(value = "业务类型", index = 6)
+    @ExcelProperty(value = "业务类型")
     private String ywlx;
     /**
      * 安装位置
      */
-    @ExcelProperty(value = "安装位置", index = 7)
+    @ExcelProperty(value = "安装位置")
     private String azwz;
     /**
      * 所属对象名称
      */
-    @ExcelProperty(value = "所属对象名称", index = 8)
+    @ExcelProperty(value = "所属对象名称")
     private String ssdxmc;
     /**
      * 所属对象类型
      */
-    @ExcelProperty(value = "所属对象类型", index = 9)
+    @ExcelProperty(value = "所属对象类型")
     private String ssdxlx;
     /**
      * 名称
      */
-    @ExcelProperty(value = "名称", index = 10)
+    @ExcelProperty(value = "名称")
     private String mc;
     /**
      * 项目编号
      */
-    @ExcelProperty(value = "项目编号", index = 11)
+    @ExcelProperty(value = "项目编号")
     private String xmbh;
     /**
      * 任务名称
      */
-    @ExcelProperty(value = "任务名称", index = 12)
+    @ExcelProperty(value = "任务名称")
     private String rwmc;
     /**
      * 分光比
      */
-    @ExcelProperty(value = "分光比", index = 13)
+    @ExcelProperty(value = "分光比")
     private String fgb;
     /**
      * 主用OLT
      */
-    @ExcelProperty(value = "主用OLT", index = 14)
+    @ExcelProperty(value = "主用OLT")
     private String zyolt;
     /**
      * 主用OLT的PON端口
      */
-    @ExcelProperty(value = "主用OLT的PON端口", index = 15)
+    @ExcelProperty(value = "主用OLT的PON端口")
     private String zyoltPon;
     /**
      * 网元状态
      */
-    @ExcelProperty(value = "网元状态", index = 16)
+    @ExcelProperty(value = "网元状态")
     private String wyzt;
     /**
      * 产权归属
      */
-    @ExcelProperty(value = "产权归属", index = 17)
+    @ExcelProperty(value = "产权归属")
     private String cqgs;
     /**
      * 管理单位
      */
-    @ExcelProperty(value = "管理单位", index = 18)
+    @ExcelProperty(value = "管理单位")
     private String gldw;
     /**
      * 设备型号
      */
-    @ExcelProperty(value = "设备型号", index = 19)
+    @ExcelProperty(value = "设备型号")
     private String sbxh;
     /**
      * 上级POS名称
      */
-    @ExcelProperty(value = "上级POS名称", index = 20)
+    @ExcelProperty(value = "上级POS名称")
     private String sjPosMc;
     /**
      * 上级设备是否为POS
      */
-    @ExcelProperty(value = "上级设备是否为POS", index = 21)
+    @ExcelProperty(value = "上级设备是否为POS")
     private String sjsbsfwPos;
     /**
      * 上级POS端口
      */
-    @ExcelProperty(value = "上级POS端口", index = 22)
+    @ExcelProperty(value = "上级POS端口")
     private String sjPosPort;
     /**
      * 级别
      */
-    @ExcelProperty(value = "级别", index = 23)
+    @ExcelProperty(value = "级别")
     private String jb;
     /**
      * 厂商
      */
-    @ExcelProperty(value = "厂商", index = 24)
+    @ExcelProperty(value = "厂商")
     private String cs;
     /**
      * 覆盖区域
      */
-    @ExcelProperty(value = "覆盖区域", index = 25)
+    @ExcelProperty(value = "覆盖区域")
     private String fgqy;
     /**
      * 备用OLT
      */
-    @ExcelProperty(value = "备用OLT", index = 26)
+    @ExcelProperty(value = "备用OLT")
     private String byOlt;
     /**
      * 备用OLT的PON口
      */
-    @ExcelProperty(value = "备用OLT的PON口", index = 27)
+    @ExcelProperty(value = "备用OLT的PON口")
     private String byOltPon;
     /**
      * 资产编号
      */
-    @ExcelProperty(value = "资产编号", index = 28)
+    @ExcelProperty(value = "资产编号")
     private String zcbh;
     /**
      * 位置描述
      */
-    @ExcelProperty(value = "位置描述", index = 29)
+    @ExcelProperty(value = "位置描述")
     private String wzms;
     /**
      * 二维码
      */
-    @ExcelProperty(value = "二维码", index = 30)
+    @ExcelProperty(value = "二维码")
     private String ewm;
     /**
      * 采集名称
      */
-    @ExcelProperty(value = "采集名称", index = 31)
+    @ExcelProperty(value = "采集名称")
     private String cjmc;
     /**
      * 验收状态
      */
-    @ExcelProperty(value = "验收状态", index = 32)
+    @ExcelProperty(value = "验收状态")
     private String yszt;
     /**
      * 未通过原因
      */
-    @ExcelProperty(value = "未通过原因", index = 33)
+    @ExcelProperty(value = "未通过原因")
     private String wtgyy;
     /**
      * 时间戳
      */
-    @ExcelProperty(value = "时间戳", index = 34)
+    @ExcelProperty(value = "时间戳")
     private String sjc;
     /**
      * 修改时间
      */
-    @ExcelProperty(value = "修改时间", index = 35)
+    @ExcelProperty(value = "修改时间")
     private String xgsj;
-    /**
-     * 网元内部编码
-     */
-    @ExcelProperty(value = "网元内部编码", index = 36)
-    private String wynbbm2;
     /**
      * 创建人
      */
-    @ExcelProperty(value = "创建人", index = 37)
+    @ExcelProperty(value = "创建人")
     private String cjr;
     /**
      * 创建时间
      */
-    @ExcelProperty(value = "创建时间", index = 38)
+    @ExcelProperty(value = "创建时间")
     private String cjsj;
     /**
      * 修改人
      */
-    @ExcelProperty(value = "修改人", index = 39)
+    @ExcelProperty(value = "修改人")
     private String xgr;
     /**
      * 是否合格
      */
-    @ExcelProperty(value = "是否合格", index = 40)
+    @ExcelProperty(value = "是否合格")
     private String sfhg;
     /**
      * 错误类型
      */
-    @ExcelProperty(value = "错误类型", index = 41)
+    @ExcelProperty(value = "错误类型")
     private String cwlx;
     /**
      * 纬度
      */
-    @ExcelProperty(value = "纬度", index = 42)
+    @ExcelProperty(value = "纬度")
     private String jw;
     /**
      * 经度
      */
-    @ExcelProperty(value = "经度", index = 43)
+    @ExcelProperty(value = "经度")
     private String jd;
     /**
      * 数据质量责任人(工程)
      */
-    @ExcelProperty(value = "数据质量责任人(工程)", index = 44)
+    @ExcelProperty(value = "数据质量责任人(工程)")
     private String sjzlzrrgc;
     /**
      * 数据质量责任人(地市)
      */
-    @ExcelProperty(value = "数据质量责任人(地市)", index = 45)
+    @ExcelProperty(value = "数据质量责任人(地市)")
     private String sjzlzrrds;
     /**
      * 数据质量责任人(区县)
      */
-    @ExcelProperty(value = "数据质量责任人(区县)", index = 46)
+    @ExcelProperty(value = "数据质量责任人(区县)")
     private String sjzlzrrqx;
     /**
      * change_task_id
      */
-    @ExcelProperty(value = "change_task_id", index = 47)
+    @ExcelProperty(value = "change_task_id")
     private String changeTaskId;
     /**
      * 一线数据维护人（代维/一线）
      */
-    @ExcelProperty(value = "一线数据维护人（代维/一线）", index = 48)
+    @ExcelProperty(value = "一线数据维护人（代维/一线）")
     private String yxsjwhr;
     /**
      * 上联PON口是否为10GE
      */
-    @ExcelProperty(value = "上联PON口是否为10GE", index = 49)
+    @ExcelProperty(value = "上联PON口是否为10GE")
     private String slPonSf10Ge;
     /**
      * 维护地市
      */
-    @ExcelProperty(value = "维护地市", index = 50)
+    @ExcelProperty(value = "维护地市")
     private String whds;
     /**
      * 维护区县
      */
-    @ExcelProperty(value = "维护区县", index = 51)
+    @ExcelProperty(value = "维护区县")
     private String whqx;
 
     @Override
@@ -451,10 +446,6 @@ public class FgqResultEntity {
 
     public void setXgsj(String xgsj) {
         this.xgsj = xgsj.trim();
-    }
-
-    public void setWynbbm2(String wynbbm2) {
-        this.wynbbm2 = wynbbm2.trim();
     }
 
     public void setCjr(String cjr) {
