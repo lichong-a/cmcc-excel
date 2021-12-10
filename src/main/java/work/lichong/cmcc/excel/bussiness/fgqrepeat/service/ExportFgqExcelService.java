@@ -45,6 +45,8 @@ public class ExportFgqExcelService {
             ResultEntity result = new ResultEntity();
             // 地市
             result.setDs(fgqPortRepeat.getDs());
+            // 宽带账号
+            result.setKdzh(fgqPortRepeat.getBzymc());
             // 分光器端口名称
             String fgqdkmc = fgqPortRepeat.getFgqdkmc();
             // 根据《分光器端口名称》在第二步Excel中的查到对应的所属设备名称
