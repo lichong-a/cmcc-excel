@@ -96,7 +96,7 @@ public class ExportFgqExcelService {
                         .build(), matcher);
                 List<FgqPortResultEntity> fgqPorts2 = fgqPortResultRepository.findAll(fgqPortResultEntityExample2);
                 if (CollUtil.isEmpty(fgqPorts2)) {
-                    return;
+                    continue;
                 }
                 FgqPortResultEntity fgqPort2 = fgqPorts2.get(0);
                 result.setFgqdkmc(fgqPort2.getMc());
