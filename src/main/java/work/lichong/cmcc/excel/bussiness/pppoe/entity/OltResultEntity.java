@@ -355,246 +355,246 @@ public class OltResultEntity {
     }
 
     public void setWynbbm(String wynbbm) {
-        this.wynbbm = wynbbm.trim();
+        this.wynbbm = Objects.nonNull(wynbbm) ? wynbbm.trim() : "";
     }
 
     public void setSfsd(String sfsd) {
-        this.sfsd = sfsd.trim();
+        this.sfsd = Objects.nonNull(sfsd) ? sfsd.trim() : "";
     }
 
     public void setSsyxqy(String ssyxqy) {
-        this.ssyxqy = ssyxqy.trim();
+        this.ssyxqy = Objects.nonNull(ssyxqy) ? ssyxqy.trim() : "";
     }
 
     public void setSssf(String sssf) {
-        this.sssf = sssf.trim();
+        this.sssf = Objects.nonNull(sssf) ? sssf.trim() : "";
     }
 
     public void setSsds(String ssds) {
-        this.ssds = ssds.trim();
+        this.ssds = Objects.nonNull(ssds) ? ssds.trim() : "";
     }
 
     public void setSsqx(String ssqx) {
-        this.ssqx = ssqx.trim();
+        this.ssqx = Objects.nonNull(ssqx) ? ssqx.trim() : "";
     }
 
     public void setSszd(String sszd) {
-        this.sszd = sszd.trim();
+        this.sszd = Objects.nonNull(sszd) ? sszd.trim() : "";
     }
 
     public void setSsjf(String ssjf) {
-        this.ssjf = ssjf.trim();
+        this.ssjf = Objects.nonNull(ssjf) ? ssjf.trim() : "";
     }
 
     public void setSsjj(String ssjj) {
-        this.ssjj = ssjj.trim();
+        this.ssjj = Objects.nonNull(ssjj) ? ssjj.trim() : "";
     }
 
     public void setZwmc(String zwmc) {
-        this.zwmc = zwmc.trim();
+        this.zwmc = Objects.nonNull(zwmc) ? zwmc.trim() : "";
     }
 
     public void setXmbh(String xmbh) {
-        this.xmbh = xmbh.trim();
+        this.xmbh = Objects.nonNull(xmbh) ? xmbh.trim() : "";
     }
 
     public void setXmmc(String xmmc) {
-        this.xmmc = xmmc.trim();
+        this.xmmc = Objects.nonNull(xmmc) ? xmmc.trim() : "";
     }
 
     public void setGldw(String gldw) {
-        this.gldw = gldw.trim();
+        this.gldw = Objects.nonNull(gldw) ? gldw.trim() : "";
     }
 
     public void setSsEms(String ssEms) {
-        this.ssEms = ssEms.trim();
+        this.ssEms = Objects.nonNull(ssEms) ? ssEms.trim() : "";
     }
 
     public void setCs(String cs) {
-        this.cs = cs.trim();
+        this.cs = Objects.nonNull(cs) ? cs.trim() : "";
     }
 
     public void setIp(String ip) {
-        this.ip = ip.trim();
+        this.ip = Objects.nonNull(ip) ? ip.trim() : "";
     }
 
     public void setWyzt(String wyzt) {
-        this.wyzt = wyzt.trim();
+        this.wyzt = Objects.nonNull(wyzt) ? wyzt.trim() : "";
     }
 
     public void setBm(String bm) {
-        this.bm = bm.trim();
+        this.bm = Objects.nonNull(bm) ? bm.trim() : "";
     }
 
     public void setCzjkyhsl(String czjkyhsl) {
-        this.czjkyhsl = czjkyhsl.trim();
+        this.czjkyhsl = Objects.nonNull(czjkyhsl) ? czjkyhsl.trim() : "";
     }
 
     public void setLxfttb(String lxfttb) {
-        this.lxfttb = lxfttb.trim();
+        this.lxfttb = Objects.nonNull(lxfttb) ? lxfttb.trim() : "";
     }
 
     public void setXlftth(String xlftth) {
-        this.xlftth = xlftth.trim();
+        this.xlftth = Objects.nonNull(xlftth) ? xlftth.trim() : "";
     }
 
     public void setSfwssxll(String sfwssxll) {
-        this.sfwssxll = sfwssxll.trim();
+        this.sfwssxll = Objects.nonNull(sfwssxll) ? sfwssxll.trim() : "";
     }
 
     public void setBz(String bz) {
-        this.bz = bz.trim();
+        this.bz = Objects.nonNull(bz) ? bz.trim() : "";
     }
 
     public void setBz1(String bz1) {
-        this.bz1 = bz1.trim();
+        this.bz1 = Objects.nonNull(bz1) ? bz1.trim() : "";
     }
 
     public void setSlzsbId(String slzsbId) {
-        this.slzsbId = slzsbId.trim();
+        this.slzsbId = Objects.nonNull(slzsbId) ? slzsbId.trim() : "";
     }
 
     public void setSlzsbdkId(String slzsbdkId) {
-        this.slzsbdkId = slzsbdkId.trim();
+        this.slzsbdkId = Objects.nonNull(slzsbdkId) ? slzsbdkId.trim() : "";
     }
 
     public void setSlzsblx(String slzsblx) {
-        this.slzsblx = slzsblx.trim();
+        this.slzsblx = Objects.nonNull(slzsblx) ? slzsblx.trim() : "";
     }
 
     public void setSlbsbId(String slbsbId) {
-        this.slbsbId = slbsbId.trim();
+        this.slbsbId = Objects.nonNull(slbsbId) ? slbsbId.trim() : "";
     }
 
     public void setSlbsbdkId(String slbsbdkId) {
-        this.slbsbdkId = slbsbdkId.trim();
+        this.slbsbdkId = Objects.nonNull(slbsbdkId) ? slbsbdkId.trim() : "";
     }
 
     public void setSlbsblx(String slbsblx) {
-        this.slbsblx = slbsblx.trim();
+        this.slbsblx = Objects.nonNull(slbsblx) ? slbsblx.trim() : "";
     }
 
     public void setZcbh(String zcbh) {
-        this.zcbh = zcbh.trim();
+        this.zcbh = Objects.nonNull(zcbh) ? zcbh.trim() : "";
     }
 
     public void setFgqy(String fgqy) {
-        this.fgqy = fgqy.trim();
+        this.fgqy = Objects.nonNull(fgqy) ? fgqy.trim() : "";
     }
 
     public void setYonujzdcsjl(String yonujzdcsjl) {
-        this.yonujzdcsjl = yonujzdcsjl.trim();
+        this.yonujzdcsjl = Objects.nonNull(yonujzdcsjl) ? yonujzdcsjl.trim() : "";
     }
 
     public void setCqgs(String cqgs) {
-        this.cqgs = cqgs.trim();
+        this.cqgs = Objects.nonNull(cqgs) ? cqgs.trim() : "";
     }
 
     public void setRjbb(String rjbb) {
-        this.rjbb = rjbb.trim();
+        this.rjbb = Objects.nonNull(rjbb) ? rjbb.trim() : "";
     }
 
     public void setSbxh(String sbxh) {
-        this.sbxh = sbxh.trim();
+        this.sbxh = Objects.nonNull(sbxh) ? sbxh.trim() : "";
     }
 
     public void setCjmc(String cjmc) {
-        this.cjmc = cjmc.trim();
+        this.cjmc = Objects.nonNull(cjmc) ? cjmc.trim() : "";
     }
 
     public void setXgsj(String xgsj) {
-        this.xgsj = xgsj.trim();
+        this.xgsj = Objects.nonNull(xgsj) ? xgsj.trim() : "";
     }
 
     public void setCjr(String cjr) {
-        this.cjr = cjr.trim();
+        this.cjr = Objects.nonNull(cjr) ? cjr.trim() : "";
     }
 
     public void setCjsj(String cjsj) {
-        this.cjsj = cjsj.trim();
+        this.cjsj = Objects.nonNull(cjsj) ? cjsj.trim() : "";
     }
 
     public void setXgr(String xgr) {
-        this.xgr = xgr.trim();
+        this.xgr = Objects.nonNull(xgr) ? xgr.trim() : "";
     }
 
     public void setSfhg(String sfhg) {
-        this.sfhg = sfhg.trim();
+        this.sfhg = Objects.nonNull(sfhg) ? sfhg.trim() : "";
     }
 
     public void setCwlx(String cwlx) {
-        this.cwlx = cwlx.trim();
+        this.cwlx = Objects.nonNull(cwlx) ? cwlx.trim() : "";
     }
 
     public void setSjc(String sjc) {
-        this.sjc = sjc.trim();
+        this.sjc = Objects.nonNull(sjc) ? sjc.trim() : "";
     }
 
     public void setBdcswymcby(String bdcswymcby) {
-        this.bdcswymcby = bdcswymcby.trim();
+        this.bdcswymcby = Objects.nonNull(bdcswymcby) ? bdcswymcby.trim() : "";
     }
 
     public void setBdcswydkby(String bdcswydkby) {
-        this.bdcswydkby = bdcswydkby.trim();
+        this.bdcswydkby = Objects.nonNull(bdcswydkby) ? bdcswydkby.trim() : "";
     }
 
     public void setDdcswydkzy(String ddcswydkzy) {
-        this.ddcswydkzy = ddcswydkzy.trim();
+        this.ddcswydkzy = Objects.nonNull(ddcswydkzy) ? ddcswydkzy.trim() : "";
     }
 
     public void setDdcswymczy(String ddcswymczy) {
-        this.ddcswymczy = ddcswymczy.trim();
+        this.ddcswymczy = Objects.nonNull(ddcswymczy) ? ddcswymczy.trim() : "";
     }
 
     public void setDdcswymcby(String ddcswymcby) {
-        this.ddcswymcby = ddcswymcby.trim();
+        this.ddcswymcby = Objects.nonNull(ddcswymcby) ? ddcswymcby.trim() : "";
     }
 
     public void setDdcswydkby(String ddcswydkby) {
-        this.ddcswydkby = ddcswydkby.trim();
+        this.ddcswydkby = Objects.nonNull(ddcswydkby) ? ddcswydkby.trim() : "";
     }
 
     public void setOtnptnbdcswymczy(String otnptnbdcswymczy) {
-        this.otnptnbdcswymczy = otnptnbdcswymczy.trim();
+        this.otnptnbdcswymczy = Objects.nonNull(otnptnbdcswymczy) ? otnptnbdcswymczy.trim() : "";
     }
 
     public void setBdcswydkzy(String bdcswydkzy) {
-        this.bdcswydkzy = bdcswydkzy.trim();
+        this.bdcswydkzy = Objects.nonNull(bdcswydkzy) ? bdcswydkzy.trim() : "";
     }
 
     public void setSlzbrassfjgcsll(String slzbrassfjgcsll) {
-        this.slzbrassfjgcsll = slzbrassfjgcsll.trim();
+        this.slzbrassfjgcsll = Objects.nonNull(slzbrassfjgcsll) ? slzbrassfjgcsll.trim() : "";
     }
 
     public void setSccsllbydlh(String sccsllbydlh) {
-        this.sccsllbydlh = sccsllbydlh.trim();
+        this.sccsllbydlh = Objects.nonNull(sccsllbydlh) ? sccsllbydlh.trim() : "";
     }
 
     public void setSccsllzydlh(String sccsllzydlh) {
-        this.sccsllzydlh = sccsllzydlh.trim();
+        this.sccsllzydlh = Objects.nonNull(sccsllzydlh) ? sccsllzydlh.trim() : "";
     }
 
     public void setYwlx(String ywlx) {
-        this.ywlx = ywlx.trim();
+        this.ywlx = Objects.nonNull(ywlx) ? ywlx.trim() : "";
     }
 
     public void setYxsjwhr(String yxsjwhr) {
-        this.yxsjwhr = yxsjwhr.trim();
+        this.yxsjwhr = Objects.nonNull(yxsjwhr) ? yxsjwhr.trim() : "";
     }
 
     public void setSjzlzrrds(String sjzlzrrds) {
-        this.sjzlzrrds = sjzlzrrds.trim();
+        this.sjzlzrrds = Objects.nonNull(sjzlzrrds) ? sjzlzrrds.trim() : "";
     }
 
     public void setSjzlzrrqx(String sjzlzrrqx) {
-        this.sjzlzrrqx = sjzlzrrqx.trim();
+        this.sjzlzrrqx = Objects.nonNull(sjzlzrrqx) ? sjzlzrrqx.trim() : "";
     }
 
     public void setSjzlzrrgc(String sjzlzrrgc) {
-        this.sjzlzrrgc = sjzlzrrgc.trim();
+        this.sjzlzrrgc = Objects.nonNull(sjzlzrrgc) ? sjzlzrrgc.trim() : "";
     }
 
     public void setRwtzmc(String rwtzmc) {
-        this.rwtzmc = rwtzmc.trim();
+        this.rwtzmc = Objects.nonNull(rwtzmc) ? rwtzmc.trim() : "";
     }
 }

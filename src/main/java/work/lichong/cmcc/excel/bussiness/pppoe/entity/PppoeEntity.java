@@ -99,42 +99,42 @@ public class PppoeEntity {
     }
 
     public void setDs(String ds) {
-        this.ds = ds.trim();
+        this.ds = Objects.nonNull(ds) ? ds.trim() : "";
     }
 
     public void setQx(String qx) {
-        this.qx = qx.trim();
+        this.qx = Objects.nonNull(qx) ? qx.trim() : "";
     }
 
     public void setXqId(String xqId) {
-        this.xqId = xqId.trim();
+        this.xqId = Objects.nonNull(xqId) ? xqId.trim() : "";
     }
 
     public void setXqmc(String xqmc) {
-        this.xqmc = xqmc.trim();
+        this.xqmc = Objects.nonNull(xqmc) ? xqmc.trim() : "";
     }
 
     public void setKhbkdzh(String khbkdzh) {
-        this.khbkdzh = khbkdzh.trim();
+        this.khbkdzh = Objects.nonNull(khbkdzh) ? khbkdzh.trim() : "";
     }
 
     public void setHdkdzh(String hdkdzh) {
-        this.hdkdzh = hdkdzh.trim();
+        this.hdkdzh = Objects.nonNull(hdkdzh) ? hdkdzh.trim() : "";
     }
 
     public void setHdIp(String hdIp) {
-        this.hdIp = hdIp.trim();
+        this.hdIp = Objects.nonNull(hdIp) ? hdIp.trim() : "";
     }
 
     public void setHdPon(String hdPon) {
-        this.hdPon = hdPon.trim();
+        this.hdPon = Objects.nonNull(hdPon) ? hdPon.trim() : "";
     }
 
     public void setIp(String ip) {
-        this.ip = ip.trim();
+        this.ip = Objects.nonNull(ip) ? ip.trim() : "";
     }
 
     public void setPon(String pon) {
-        this.pon = pon.trim();
+        this.pon = Objects.nonNull(pon) ? pon.trim() : "";
     }
 }

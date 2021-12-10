@@ -104,6 +104,7 @@ public class ExportFgqExcelService {
                 result.setFgqdkmc(fgqPort2.getMc());
                 result.setFgqdkwynbbm(fgqPort2.getWynbbm());
                 results.add(result);
+                break;
             }
         });
         return results;

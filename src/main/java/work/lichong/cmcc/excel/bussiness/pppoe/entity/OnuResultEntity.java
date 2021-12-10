@@ -244,159 +244,159 @@ public class OnuResultEntity {
         return getClass().hashCode();
     }
 
+    public void setWynbbm(String wynbbm) {
+        this.wynbbm = Objects.nonNull(wynbbm) ? wynbbm.trim() : "";
+    }
+
     public void setSf10ge(String sf10ge) {
-        this.sf10ge = sf10ge.trim();
+        this.sf10ge = Objects.nonNull(sf10ge) ? sf10ge.trim() : "";
     }
 
     public void setSsds(String ssds) {
-        this.ssds = ssds.trim();
+        this.ssds = Objects.nonNull(ssds) ? ssds.trim() : "";
     }
 
     public void setSsqx(String ssqx) {
-        this.ssqx = ssqx.trim();
+        this.ssqx = Objects.nonNull(ssqx) ? ssqx.trim() : "";
     }
 
     public void setDkmc(String dkmc) {
-        this.dkmc = dkmc.trim();
+        this.dkmc = Objects.nonNull(dkmc) ? dkmc.trim() : "";
     }
 
     public void setSssblx(String sssblx) {
-        this.sssblx = sssblx.trim();
+        this.sssblx = Objects.nonNull(sssblx) ? sssblx.trim() : "";
     }
 
     public void setDkzt(String dkzt) {
-        this.dkzt = dkzt.trim();
+        this.dkzt = Objects.nonNull(dkzt) ? dkzt.trim() : "";
     }
 
     public void setDkyt(String dkyt) {
-        this.dkyt = dkyt.trim();
+        this.dkyt = Objects.nonNull(dkyt) ? dkyt.trim() : "";
     }
 
     public void setDklx(String dklx) {
-        this.dklx = dklx.trim();
+        this.dklx = Objects.nonNull(dklx) ? dklx.trim() : "";
     }
 
     public void setCjmc(String cjmc) {
-        this.cjmc = cjmc.trim();
+        this.cjmc = Objects.nonNull(cjmc) ? cjmc.trim() : "";
     }
 
     public void setSssbmc(String sssbmc) {
-        this.sssbmc = sssbmc.trim();
+        this.sssbmc = Objects.nonNull(sssbmc) ? sssbmc.trim() : "";
     }
 
     public void setWltx(String wltx) {
-        this.wltx = wltx.trim();
+        this.wltx = Objects.nonNull(wltx) ? wltx.trim() : "";
     }
 
     public void setSl(String sl) {
-        this.sl = sl.trim();
+        this.sl = Objects.nonNull(sl) ? sl.trim() : "";
     }
 
     public void setSsbk(String ssbk) {
-        this.ssbk = ssbk.trim();
+        this.ssbk = Objects.nonNull(ssbk) ? ssbk.trim() : "";
     }
 
     public void setDkbh(String dkbh) {
-        this.dkbh = dkbh.trim();
+        this.dkbh = Objects.nonNull(dkbh) ? dkbh.trim() : "";
     }
 
     public void setCzjkyhl(String czjkyhl) {
-        this.czjkyhl = czjkyhl.trim();
+        this.czjkyhl = Objects.nonNull(czjkyhl) ? czjkyhl.trim() : "";
     }
 
     public void setXlfttbonusl(String xlfttbonusl) {
-        this.xlfttbonusl = xlfttbonusl.trim();
+        this.xlfttbonusl = Objects.nonNull(xlfttbonusl) ? xlfttbonusl.trim() : "";
     }
 
     public void setXlftthonusl(String xlftthonusl) {
-        this.xlftthonusl = xlftthonusl.trim();
+        this.xlftthonusl = Objects.nonNull(xlftthonusl) ? xlftthonusl.trim() : "";
     }
 
     public void setSfslk(String sfslk) {
-        this.sfslk = sfslk.trim();
+        this.sfslk = Objects.nonNull(sfslk) ? sfslk.trim() : "";
     }
 
     public void setDkywlx(String dkywlx) {
-        this.dkywlx = dkywlx.trim();
+        this.dkywlx = Objects.nonNull(dkywlx) ? dkywlx.trim() : "";
     }
 
     public void setZwym(String zwym) {
-        this.zwym = zwym.trim();
+        this.zwym = Objects.nonNull(zwym) ? zwym.trim() : "";
     }
 
     public void setSfzcfy(String sfzcfy) {
-        this.sfzcfy = sfzcfy.trim();
+        this.sfzcfy = Objects.nonNull(sfzcfy) ? sfzcfy.trim() : "";
     }
 
     public void setSfbs(String sfbs) {
-        this.sfbs = sfbs.trim();
+        this.sfbs = Objects.nonNull(sfbs) ? sfbs.trim() : "";
     }
 
     public void setIp(String ip) {
-        this.ip = ip.trim();
+        this.ip = Objects.nonNull(ip) ? ip.trim() : "";
     }
 
     public void setJklx(String jklx) {
-        this.jklx = jklx.trim();
-    }
-
-    public void setWynbbm(String wynbbm) {
-        this.wynbbm = wynbbm.trim();
+        this.jklx = Objects.nonNull(jklx) ? jklx.trim() : "";
     }
 
     public void setSjzlzrrgc(String sjzlzrrgc) {
-        this.sjzlzrrgc = sjzlzrrgc.trim();
+        this.sjzlzrrgc = Objects.nonNull(sjzlzrrgc) ? sjzlzrrgc.trim() : "";
     }
 
     public void setYxsjwhrdw(String yxsjwhrdw) {
-        this.yxsjwhrdw = yxsjwhrdw.trim();
+        this.yxsjwhrdw = Objects.nonNull(yxsjwhrdw) ? yxsjwhrdw.trim() : "";
     }
 
     public void setSjzlzrrqx(String sjzlzrrqx) {
-        this.sjzlzrrqx = sjzlzrrqx.trim();
+        this.sjzlzrrqx = Objects.nonNull(sjzlzrrqx) ? sjzlzrrqx.trim() : "";
     }
 
     public void setSjzlzrrzw(String sjzlzrrzw) {
-        this.sjzlzrrzw = sjzlzrrzw.trim();
+        this.sjzlzrrzw = Objects.nonNull(sjzlzrrzw) ? sjzlzrrzw.trim() : "";
     }
 
     public void setSjc(String sjc) {
-        this.sjc = sjc.trim();
+        this.sjc = Objects.nonNull(sjc) ? sjc.trim() : "";
     }
 
     public void setCsr(String csr) {
-        this.csr = csr.trim();
+        this.csr = Objects.nonNull(csr) ? csr.trim() : "";
     }
 
     public void setCjsj(String cjsj) {
-        this.cjsj = cjsj.trim();
+        this.cjsj = Objects.nonNull(cjsj) ? cjsj.trim() : "";
     }
 
     public void setXgr(String xgr) {
-        this.xgr = xgr.trim();
+        this.xgr = Objects.nonNull(xgr) ? xgr.trim() : "";
     }
 
     public void setXgsj(String xgsj) {
-        this.xgsj = xgsj.trim();
+        this.xgsj = Objects.nonNull(xgsj) ? xgsj.trim() : "";
     }
 
     public void setSfhg(String sfhg) {
-        this.sfhg = sfhg.trim();
+        this.sfhg = Objects.nonNull(sfhg) ? sfhg.trim() : "";
     }
 
     public void setCwlx(String cwlx) {
-        this.cwlx = cwlx.trim();
+        this.cwlx = Objects.nonNull(cwlx) ? cwlx.trim() : "";
     }
 
     public void setSfygcj(String sfygcj) {
-        this.sfygcj = sfygcj.trim();
+        this.sfygcj = Objects.nonNull(sfygcj) ? sfygcj.trim() : "";
     }
 
     public void setOdfddfdz(String odfddfdz) {
-        this.odfddfdz = odfddfdz.trim();
+        this.odfddfdz = Objects.nonNull(odfddfdz) ? odfddfdz.trim() : "";
     }
 
     public void setChangeTaskId(String changeTaskId) {
-        this.changeTaskId = changeTaskId.trim();
+        this.changeTaskId = Objects.nonNull(changeTaskId) ? changeTaskId.trim() : "";
     }
 }

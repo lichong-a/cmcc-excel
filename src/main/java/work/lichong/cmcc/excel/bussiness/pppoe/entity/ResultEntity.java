@@ -6,6 +6,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Objects;
+
 /**
  * @author ric
  * @date 2021年12月07日 19:58
@@ -49,11 +51,11 @@ public class ResultEntity {
     private String fgqdkwynbbm;
 
     public void setDs(String ds) {
-        this.ds = ds.trim();
+        this.ds = Objects.nonNull(ds) ? ds.trim() : "";
     }
 
     public void setKdzh(String kdzh) {
-        this.kdzh = kdzh.trim();
+        this.kdzh = Objects.nonNull(kdzh) ? kdzh.trim() : "";
     }
 
     public void setFgqmc(String fgqmc) {

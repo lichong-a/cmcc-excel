@@ -99,42 +99,42 @@ public class FgqPortRepeatEntity {
     }
 
     public void setDs(String ds) {
-        this.ds = ds.trim();
+        this.ds = Objects.nonNull(ds) ? ds.trim() : "";
     }
 
     public void setQx(String qx) {
-        this.qx = qx.trim();
+        this.qx = Objects.nonNull(qx) ? qx.trim() : "";
     }
 
     public void setYxqy(String yxqy) {
-        this.yxqy = yxqy.trim();
+        this.yxqy = Objects.nonNull(yxqy) ? yxqy.trim() : "";
     }
 
     public void setXqId(String xqId) {
-        this.xqId = xqId.trim();
+        this.xqId = Objects.nonNull(xqId) ? xqId.trim() : "";
     }
 
     public void setXqmc(String xqmc) {
-        this.xqmc = xqmc.trim();
+        this.xqmc = Objects.nonNull(xqmc) ? xqmc.trim() : "";
     }
 
     public void setFgqdkid(String fgqdkid) {
-        this.fgqdkid = fgqdkid.trim();
+        this.fgqdkid = Objects.nonNull(fgqdkid) ? fgqdkid.trim() : "";
     }
 
     public void setFgqdkmc(String fgqdkmc) {
-        this.fgqdkmc = fgqdkmc.trim();
+        this.fgqdkmc = Objects.nonNull(fgqdkmc) ? fgqdkmc.trim() : "";
     }
 
     public void setBzymc(String bzymc) {
-        this.bzymc = bzymc.trim();
+        this.bzymc = Objects.nonNull(bzymc) ? bzymc.trim() : "";
     }
 
     public void setBzyid(String bzyid) {
-        this.bzyid = bzyid.trim();
+        this.bzyid = Objects.nonNull(bzyid) ? bzyid.trim() : "";
     }
 
     public void setBzydmx(String bzydmx) {
-        this.bzydmx = bzydmx.trim();
+        this.bzydmx = Objects.nonNull(bzydmx) ? bzydmx.trim() : "";
     }
 }
