@@ -4,7 +4,6 @@ import cn.hutool.core.collection.CollUtil;
 import com.alibaba.excel.EasyExcelFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
-import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
 import work.lichong.cmcc.excel.bussiness.fgqrepeat.dao.FgqPortRepeatRepository;
 import work.lichong.cmcc.excel.bussiness.fgqrepeat.entity.FgqPortRepeatEntity;
@@ -63,7 +62,7 @@ public class ExportFgqExcelService {
             String sssbmc = fgqPort.getSssbmc();
             Example<FgqResultEntity> fgqResultEntityExample = Example.of(FgqResultEntity
                     .builder()
-                    .zgzwmc(sssbmc)
+                    .mc(sssbmc)
                     .build());
             List<FgqResultEntity> fgqs = fgqResultRepository.findAll(fgqResultEntityExample);
             if (CollUtil.isEmpty(fgqs)) {
@@ -84,18 +83,18 @@ public class ExportFgqExcelService {
             }
             for (FgqResultEntity fgq2 : fgqs2) {
                 // 资管中文名称
-                String zgzwmc = fgq2.getZgzwmc();
+                String mc2 = fgq2.getMc();
                 // 分光器的网元内部编码
                 String fgqWynbbm = fgq2.getWynbbm();
-                result.setFgqmc(zgzwmc);
+                result.setFgqmc(mc2);
                 result.setFgqwynbbm(fgqWynbbm);
                 // 根据找到的分光器，在第五步Excel中筛选其中《端口状态》为空闲的分光器端口，最终得出任意一空闲端口即可。得到《名称》和《网元编码》。如果没有空闲口，返回上一步重新运行
-                ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("zgzwmc",ExampleMatcher.GenericPropertyMatchers.startsWith());
+                // ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("zgzwmc",ExampleMatcher.GenericPropertyMatchers.startsWith());
                 Example<FgqPortResultEntity> fgqPortResultEntityExample2 = Example.of(FgqPortResultEntity
                         .builder()
-                        .zgzwmc(zgzwmc)
+                        .sssbmc(mc2)
                         .dkzt("空闲")
-                        .build(), matcher);
+                        .build());
                 List<FgqPortResultEntity> fgqPorts2 = fgqPortResultRepository.findAll(fgqPortResultEntityExample2);
                 if (CollUtil.isEmpty(fgqPorts2)) {
                     continue;
